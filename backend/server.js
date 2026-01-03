@@ -12,6 +12,7 @@ import treatmentsRoutes from './routes/treatments.js';
 import predictionRoutes from './routes/prediction.js';
 import bodyRegionsRoutes from './routes/bodyRegions.js';
 import { auditLog } from './middleware/audit.js';
+import keepAliveService from './services/keepAlive.js';
 
 // Load environment variables
 dotenv.config();
@@ -157,6 +158,9 @@ app.listen(PORT, () => {
     console.log('   GET    /fhir/Condition');
     console.log('   POST   /fhir/Bundle');
     console.log('');
+
+    // Start keep-alive service for Render free tier
+    keepAliveService.start();
 });
 
 export default app;
