@@ -5,7 +5,7 @@
  */
 
 import { Router } from 'express';
-import { pool } from '../database/db.js';
+import pool from '../database/db.js';
 import { exec } from 'child_process';
 import { promisify } from 'util';
 
