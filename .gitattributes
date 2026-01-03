@@ -1,2 +1,1 @@
-# Git LFS disabled due to storage quota
-# Large files should be stored externally or excluded via .gitignore
+*.glb filter=lfs diff=lfs merge=lfs -text

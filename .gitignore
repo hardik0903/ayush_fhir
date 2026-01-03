@@ -31,10 +31,6 @@ lerna-debug.log*
 *.swo
 *~
 
-# Large 3D model files
-frontend/public/models/*.glb
-frontend/public/models/*.gltf
-
 # Python
 __pycache__/
 *.py[cod]
@@ -46,7 +42,7 @@ venv/
 ENV/
 .venv
 
-# Data
+# Data files (large)
 data-processor/embeddings.json
 data-processor/cache/
 *.csv
