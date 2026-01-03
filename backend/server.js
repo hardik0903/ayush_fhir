@@ -14,6 +14,7 @@ import bodyRegionsRoutes from './routes/bodyRegions.js';
 import { auditLog } from './middleware/audit.js';
 import keepAliveService from './services/keepAlive.js';
 import dbInitRoutes from './routes/dbInit.js';
+import testDoctorsRoutes from './routes/testDoctors.js';
 
 // Load environment variables
 dotenv.config();
@@ -58,6 +59,7 @@ app.use('/api/analytics', analyticsRoutes);
 app.use('/api/prediction', predictionRoutes);
 app.use('/api/body-regions', bodyRegionsRoutes);
 app.use('/api/db-init', dbInitRoutes);
+app.use('/api/test/doctors', testDoctorsRoutes);
 
 // FHIR metadata endpoint
 app.get('/fhir/metadata', (req, res) => {
